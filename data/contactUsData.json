@@ -7,7 +7,7 @@
         "filePath" :"tests/resources/contactUs.png"
     },
 
-    "asserations":{
+    "assertions":{
         "contactUsLabel":" Contact Us",
         "getInTouchLabel": "Get In Touch",
         "successText":"Success! Your details have been submitted successfully."

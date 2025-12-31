@@ -29,10 +29,10 @@ test.describe("ContactUs Form Test Scripts", () => {
         await contactUsPage.clickOnContactUsButton();
 
         await expect(contactUsPage.getContactUsLabel())
-            .toHaveText(contactUsData.asserations.contactUsLabel);
+            .toHaveText(contactUsData.assertions.contactUsLabel);
 
         await expect(contactUsPage.getGetInTouchLabel())
-            .toHaveText(contactUsData.asserations.getInTouchLabel);
+            .toHaveText(contactUsData.assertions.getInTouchLabel);
 
         await contactUsPage.enterName(contactUsData.formData.name);
         await contactUsPage.enterEmail(contactUsData.formData.email);
@@ -50,7 +50,7 @@ test.describe("ContactUs Form Test Scripts", () => {
         await contactUsPage.clickOnSubmitButton();
 
         // Assert success message
-        await expect(contactUsPage.getSuccessText()).toHaveText(contactUsData.asserations.successText);
+        await expect(contactUsPage.getSuccessText()).toHaveText(contactUsData.assertions.successText);
     });
 
 
