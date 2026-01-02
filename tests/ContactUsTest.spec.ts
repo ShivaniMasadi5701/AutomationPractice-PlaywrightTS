@@ -39,8 +39,8 @@ test.describe("ContactUs Form Test Scripts", () => {
         await contactUsPage.enterSubject(contactUsData.formData.subject);
         await contactUsPage.enterMessage(contactUsData.formData.message);
         await contactUsPage.uploadFile(contactUsData.formData.filePath);
+        await page.waitForTimeout(3000); // 3 seconds
 
-        // ALERT HANDLER BEFORE SUBMIT
         page.once('dialog', async dialog => {
             expect(dialog.message()).toBe('Press OK to proceed!');
             await dialog.accept();
@@ -48,9 +48,10 @@ test.describe("ContactUs Form Test Scripts", () => {
 
         //Trigger alert
         await contactUsPage.clickOnSubmitButton();
+        await page.waitForTimeout(3000);
 
-        // Assert success message
         await expect(contactUsPage.getSuccessText()).toHaveText(contactUsData.assertions.successText);
+
     });
 
 
