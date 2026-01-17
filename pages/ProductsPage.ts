@@ -27,7 +27,7 @@ export class ProductsPage {
         this.lblQuantity=page.getByLabel('Quantity:');
         this.btnAddToCart=page.getByRole('button', { name: 'Add to cart' });
         this.txtSearchProduct=page.getByPlaceholder('Search Product');
-        this.btnSearchIcon=page.locator('#submit_search');
+          this.btnSearchIcon=page.locator('#submit_search');
 
     }
 
