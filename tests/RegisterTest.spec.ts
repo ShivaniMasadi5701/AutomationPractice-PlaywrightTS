@@ -1,15 +1,13 @@
-import { test, Page, expect } from '@playwright/test';
+import { test, expect } from '@playwright/test';
 import { RegisterPage } from '../pages/RegisterPage';
 import registerData from '../data/registerData.json';
 import loginData from '../data/loginData.json';
 
-import { feature, story } from 'allure-js-commons';
 
-feature('User Registration');
-story('Valid user signup and Deleeting the Account');
 
 
 test.describe('Register Tests', () => {
+
 
     let registerPage: RegisterPage;
 
@@ -101,7 +99,7 @@ test.describe('Register Tests', () => {
         await expect(registerPage.getNewUserSignupLabel()).toHaveText(registerData.user.assertions.newUserLabel);
 
         await registerPage.enterName(registerData.user.name);
-        await registerPage.enterEmailAddress(loginData.validUser.email); // using name as prefix and generating email
+        await registerPage.enterEmailAddress(loginData.validUser.email);
 
         const enteredName = await registerPage.getEnteredName();
         // 🔹 Print in TEST console

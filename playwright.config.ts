@@ -30,7 +30,8 @@ export default defineConfig({
   reporter: [['html'],['allure-playwright']],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-  headless: !!process.env.CI,
+    headless: true,
+  //headless: !!process.env.CI,
   baseURL: process.env.BASE_URL!,
 
     /* Base URL to use in actions like `await page.goto('')`. */

@@ -20,6 +20,7 @@ export class ProductsPage {
         this.page = page;
         this.btnProducts = page.getByRole('link', { name: 'Products' });
         this.lblAllProducts = page.getByRole('heading', { name: 'All Products' });
+        
         this.lstProducts = page.locator("//div[@class='features_items']");
         this.btnFirstProduct = page.locator('a').filter({ hasText: 'View Product' }).first();
         this.lblFirstProduct = page.locator("(//div[@class='productinfo text-center']//p)[1]");
@@ -27,7 +28,7 @@ export class ProductsPage {
         this.lblQuantity=page.getByLabel('Quantity:');
         this.btnAddToCart=page.getByRole('button', { name: 'Add to cart' });
         this.txtSearchProduct=page.getByPlaceholder('Search Product');
-          this.btnSearchIcon=page.locator('#submit_search');
+        this.btnSearchIcon=page.locator('#submit_search');
 
     }
 
